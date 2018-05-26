@@ -1,0 +1,5748 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY rami "http://www.semanticweb.org/rami#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ace_lexicon "http://attempto.ifi.uzh.ch/ace_lexicon#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rami="http://www.semanticweb.org/rami#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#">
+    <Ontology rdf:about="http://www.semanticweb.org/rami"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;CN_pl"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;CN_sg"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;PN_sg"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;TV_pl"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;TV_sg"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;TV_vbg"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hasInput -->
+
+    <ObjectProperty rdf:about="&rami;hasInput">
+        <ace_lexicon:TV_sg>hasInputs</ace_lexicon:TV_sg>
+        <ace_lexicon:TV_pl>hasInput</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_vbg>hasInputed</ace_lexicon:TV_vbg>
+        <rdfs:range rdf:resource="&rami;InputParam"/>
+        <rdfs:domain rdf:resource="&rami;MethodCall"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hasMethodCall -->
+
+    <ObjectProperty rdf:about="&rami;hasMethodCall">
+        <ace_lexicon:TV_pl>hasMethodCall</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_vbg>hasMethodCalled</ace_lexicon:TV_vbg>
+        <ace_lexicon:TV_sg>hasMethodCalls</ace_lexicon:TV_sg>
+        <rdfs:range rdf:resource="&rami;MethodCall"/>
+        <rdfs:domain rdf:resource="&rami;Resource"/>
+        <inverseOf rdf:resource="&rami;isPartOfResource"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hasOutput -->
+
+    <ObjectProperty rdf:about="&rami;hasOutput">
+        <ace_lexicon:TV_pl>hasOutput</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg>hasOutputs</ace_lexicon:TV_sg>
+        <ace_lexicon:TV_vbg>hasOutputed</ace_lexicon:TV_vbg>
+        <rdfs:domain rdf:resource="&rami;MethodCall"/>
+        <rdfs:range rdf:resource="&rami;OutputParam"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hasResource -->
+
+    <ObjectProperty rdf:about="&rami;hasResource">
+        <ace_lexicon:TV_vbg>hasResourced</ace_lexicon:TV_vbg>
+        <ace_lexicon:TV_pl>hasResource</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg>hasResources</ace_lexicon:TV_sg>
+        <rdfs:range rdf:resource="&rami;Resource"/>
+        <rdfs:domain rdf:resource="&rami;Service"/>
+        <inverseOf rdf:resource="&rami;isPartOfService"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hasSynonym -->
+
+    <ObjectProperty rdf:about="&rami;hasSynonym">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <ace_lexicon:TV_sg>hasSynonyms</ace_lexicon:TV_sg>
+        <ace_lexicon:TV_pl>hasSynonym</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_vbg>hasSynonymed</ace_lexicon:TV_vbg>
+        <rdfs:range rdf:resource="&rami;Noun"/>
+        <rdfs:domain rdf:resource="&rami;Noun"/>
+        <rdfs:subPropertyOf rdf:resource="&rami;isRelatedTo"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#isEquivalent -->
+
+    <ObjectProperty rdf:about="&rami;isEquivalent">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <ace_lexicon:TV_pl>isEquivalent</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_vbg>isEquivalented</ace_lexicon:TV_vbg>
+        <ace_lexicon:TV_sg>isEquivalents</ace_lexicon:TV_sg>
+        <rdfs:range rdf:resource="&rami;Noun"/>
+        <rdfs:domain rdf:resource="&rami;Parameter"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#isInputTo -->
+
+    <ObjectProperty rdf:about="&rami;isInputTo">
+        <inverseOf rdf:resource="&rami;hasInput"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#isOutputTo -->
+
+    <ObjectProperty rdf:about="&rami;isOutputTo">
+        <inverseOf rdf:resource="&rami;hasOutput"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#isPartOfResource -->
+
+    <ObjectProperty rdf:about="&rami;isPartOfResource">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <ace_lexicon:TV_vbg>isPartOfResourced</ace_lexicon:TV_vbg>
+        <ace_lexicon:TV_pl>isPartOfResource</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg>isPartOfResources</ace_lexicon:TV_sg>
+        <rdfs:domain rdf:resource="&rami;MethodCall"/>
+        <rdfs:range rdf:resource="&rami;Resource"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#isPartOfService -->
+
+    <ObjectProperty rdf:about="&rami;isPartOfService">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <ace_lexicon:TV_vbg>isPartOfServiced</ace_lexicon:TV_vbg>
+        <ace_lexicon:TV_pl>isPartOfService</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg>isPartOfServices</ace_lexicon:TV_sg>
+        <rdfs:domain rdf:resource="&rami;Resource"/>
+        <rdfs:range rdf:resource="&rami;Service"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#isRelatedTo -->
+
+    <ObjectProperty rdf:about="&rami;isRelatedTo">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <ace_lexicon:TV_pl>isRelatedTo</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg>isRelatedToes</ace_lexicon:TV_sg>
+        <ace_lexicon:TV_vbg>isRelatedToed</ace_lexicon:TV_vbg>
+        <rdfs:domain rdf:resource="&rami;Noun"/>
+        <rdfs:range rdf:resource="&rami;Noun"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#isTypeOf -->
+
+    <ObjectProperty rdf:about="&rami;isTypeOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <ace_lexicon:TV_pl>isTypeOf</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg>isTypeOfs</ace_lexicon:TV_sg>
+        <ace_lexicon:TV_vbg>isTypeOfed</ace_lexicon:TV_vbg>
+        <rdfs:range rdf:resource="&rami;Noun"/>
+        <rdfs:domain rdf:resource="&rami;Noun"/>
+        <rdfs:subPropertyOf rdf:resource="&rami;isRelatedTo"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Label -->
+
+    <DatatypeProperty rdf:about="&rami;Label">
+        <ace_lexicon:TV_pl>Label</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg>Labels</ace_lexicon:TV_sg>
+        <ace_lexicon:TV_vbg>Labeled</ace_lexicon:TV_vbg>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rami#InputParam -->
+
+    <Class rdf:about="&rami;InputParam">
+        <rdfs:subClassOf rdf:resource="&rami;Parameter"/>
+        <disjointWith rdf:resource="&rami;OutputParam"/>
+        <ace_lexicon:CN_sg>InputParam</ace_lexicon:CN_sg>
+        <ace_lexicon:CN_pl>InputParams</ace_lexicon:CN_pl>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#MethodCall -->
+
+    <Class rdf:about="&rami;MethodCall">
+        <ace_lexicon:CN_sg>MethodCall</ace_lexicon:CN_sg>
+        <ace_lexicon:CN_pl>MethodCalls</ace_lexicon:CN_pl>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Noun -->
+
+    <Class rdf:about="&rami;Noun">
+        <ace_lexicon:CN_sg>Noun</ace_lexicon:CN_sg>
+        <ace_lexicon:CN_pl>Nouns</ace_lexicon:CN_pl>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#OutputParam -->
+
+    <Class rdf:about="&rami;OutputParam">
+        <rdfs:subClassOf rdf:resource="&rami;Parameter"/>
+        <ace_lexicon:CN_pl>OutputParams</ace_lexicon:CN_pl>
+        <ace_lexicon:CN_sg>OutputParam</ace_lexicon:CN_sg>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Parameter -->
+
+    <Class rdf:about="&rami;Parameter">
+        <ace_lexicon:CN_pl>Parameters</ace_lexicon:CN_pl>
+        <ace_lexicon:CN_sg>Parameter</ace_lexicon:CN_sg>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Resource -->
+
+    <Class rdf:about="&rami;Resource">
+        <ace_lexicon:CN_pl>Resources</ace_lexicon:CN_pl>
+        <ace_lexicon:CN_sg>Resource</ace_lexicon:CN_sg>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Service -->
+
+    <Class rdf:about="&rami;Service">
+        <ace_lexicon:CN_pl>Services</ace_lexicon:CN_pl>
+        <ace_lexicon:CN_sg>Service</ace_lexicon:CN_sg>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rami#24-hour_interval -->
+
+    <NamedIndividual rdf:about="&rami;24-hour_interval">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#ADPS -->
+
+    <NamedIndividual rdf:about="&rami;ADPS">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#ADP_system -->
+
+    <NamedIndividual rdf:about="&rami;ADP_system">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#AlchemyAPI -->
+
+    <NamedIndividual rdf:about="&rami;AlchemyAPI">
+        <rdf:type rdf:resource="&rami;Service"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#AlchemyNews -->
+
+    <NamedIndividual rdf:about="&rami;AlchemyNews">
+        <rdf:type rdf:resource="&rami;Resource"/>
+        <rami:isPartOfService rdf:resource="&rami;AlchemyAPI"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Check -->
+
+    <NamedIndividual rdf:about="&rami;Check">
+        <rdf:type rdf:resource="&rami;Resource"/>
+        <ace_lexicon:PN_sg>Check</ace_lexicon:PN_sg>
+        <rami:isPartOfService rdf:resource="&rami;SpellCheck"/>
+        <rami:hasMethodCall rdf:resource="&rami;check"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Define -->
+
+    <NamedIndividual rdf:about="&rami;Define">
+        <rdf:type rdf:resource="&rami;Resource"/>
+        <ace_lexicon:PN_sg>Define</ace_lexicon:PN_sg>
+        <rami:isPartOfService rdf:resource="&rami;Dictionary"/>
+        <rami:hasMethodCall rdf:resource="&rami;define"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Dictionary -->
+
+    <NamedIndividual rdf:about="&rami;Dictionary">
+        <rdf:type rdf:resource="&rami;Service"/>
+        <ace_lexicon:PN_sg>Dictionary</ace_lexicon:PN_sg>
+        <rami:hasResource rdf:resource="&rami;Define"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#GeoLocation -->
+
+    <NamedIndividual rdf:about="&rami;GeoLocation">
+        <rdf:type rdf:resource="&rami;Service"/>
+        <ace_lexicon:PN_sg>GeoLocation</ace_lexicon:PN_sg>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#GoogleGeoCode -->
+
+    <NamedIndividual rdf:about="&rami;GoogleGeoCode">
+        <rdf:type rdf:resource="&rami;Resource"/>
+        <rami:hasMethodCall rdf:resource="&rami;getLocation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#GoogleLocation -->
+
+    <NamedIndividual rdf:about="&rami;GoogleLocation">
+        <rdf:type rdf:resource="&rami;Service"/>
+        <rami:hasResource rdf:resource="&rami;GoogleGeoCode"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Locate -->
+
+    <NamedIndividual rdf:about="&rami;Locate">
+        <rdf:type rdf:resource="&rami;Resource"/>
+        <rami:isPartOfService rdf:resource="&rami;GeoLocation"/>
+        <rami:hasMethodCall rdf:resource="&rami;getFirstLocation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Metacritic -->
+
+    <NamedIndividual rdf:about="&rami;Metacritic">
+        <rdf:type rdf:resource="&rami;Service"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#SearchGame -->
+
+    <NamedIndividual rdf:about="&rami;SearchGame">
+        <rdf:type rdf:resource="&rami;Resource"/>
+        <rami:isPartOfService rdf:resource="&rami;Metacritic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#SearchMovie -->
+
+    <NamedIndividual rdf:about="&rami;SearchMovie">
+        <rdf:type rdf:resource="&rami;Resource"/>
+        <rami:isPartOfService rdf:resource="&rami;Metacritic"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#SpellCheck -->
+
+    <NamedIndividual rdf:about="&rami;SpellCheck">
+        <rdf:type rdf:resource="&rami;Service"/>
+        <ace_lexicon:PN_sg>SpellCheck</ace_lexicon:PN_sg>
+        <rami:hasResource rdf:resource="&rami;Check"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#URL -->
+
+    <NamedIndividual rdf:about="&rami;URL">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;address"/>
+        <rami:hasSynonym rdf:resource="&rami;uniform_resource_locator"/>
+        <rami:hasSynonym rdf:resource="&rami;universal_resource_locator"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Weather -->
+
+    <NamedIndividual rdf:about="&rami;Weather">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rdf:type rdf:resource="&rami;Service"/>
+        <rami:hasResource rdf:resource="&rami;Weatherdata"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#Weatherdata -->
+
+    <NamedIndividual rdf:about="&rami;Weatherdata">
+        <rdf:type rdf:resource="&rami;Resource"/>
+        <rami:hasMethodCall rdf:resource="&rami;currentWeather"/>
+        <rami:hasMethodCall rdf:resource="&rami;dayWeather"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#abstract_entity -->
+
+    <NamedIndividual rdf:about="&rami;abstract_entity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;entity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#abstraction -->
+
+    <NamedIndividual rdf:about="&rami;abstraction">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;abstract_entity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#accomplishment -->
+
+    <NamedIndividual rdf:about="&rami;accomplishment">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;achievement"/>
+        <rami:isTypeOf rdf:resource="&rami;action"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#account -->
+
+    <NamedIndividual rdf:about="&rami;account">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#accumulation -->
+
+    <NamedIndividual rdf:about="&rami;accumulation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#achievement -->
+
+    <NamedIndividual rdf:about="&rami;achievement">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#act -->
+
+    <NamedIndividual rdf:about="&rami;act">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;event"/>
+        <rami:hasSynonym rdf:resource="&rami;human_action"/>
+        <rami:hasSynonym rdf:resource="&rami;human_activity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#action -->
+
+    <NamedIndividual rdf:about="&rami;action">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;act"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#activity -->
+
+    <NamedIndividual rdf:about="&rami;activity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;act"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#actuation -->
+
+    <NamedIndividual rdf:about="&rami;actuation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#actus_reus -->
+
+    <NamedIndividual rdf:about="&rami;actus_reus">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#address -->
+
+    <NamedIndividual rdf:about="&rami;address">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;code"/>
+        <rami:hasSynonym rdf:resource="&rami;computer_address"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#administrative_district -->
+
+    <NamedIndividual rdf:about="&rami;administrative_district">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;administrative_division"/>
+        <rami:isTypeOf rdf:resource="&rami;district"/>
+        <rami:hasSynonym rdf:resource="&rami;territorial_division"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#administrative_division -->
+
+    <NamedIndividual rdf:about="&rami;administrative_division">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#administrator -->
+
+    <NamedIndividual rdf:about="&rami;administrator">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;decision_maker"/>
+        <rami:isTypeOf rdf:resource="&rami;head"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#adult -->
+
+    <NamedIndividual rdf:about="&rami;adult">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;grownup"/>
+        <rami:isTypeOf rdf:resource="&rami;person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#aggregation -->
+
+    <NamedIndividual rdf:about="&rami;aggregation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#alchemyNewImage -->
+
+    <NamedIndividual rdf:about="&rami;alchemyNewImage">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">image</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;image"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#alchemyNewsKeywords -->
+
+    <NamedIndividual rdf:about="&rami;alchemyNewsKeywords">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">text</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;entity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#alchemyNewsText -->
+
+    <NamedIndividual rdf:about="&rami;alchemyNewsText">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">text</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;news"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#alchemyNewsTitle -->
+
+    <NamedIndividual rdf:about="&rami;alchemyNewsTitle">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">title</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;news"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#amount -->
+
+    <NamedIndividual rdf:about="&rami;amount">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#animal -->
+
+    <NamedIndividual rdf:about="&rami;animal">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;animate_being"/>
+        <rami:hasSynonym rdf:resource="&rami;beast"/>
+        <rami:hasSynonym rdf:resource="&rami;brute"/>
+        <rami:hasSynonym rdf:resource="&rami;creature"/>
+        <rami:hasSynonym rdf:resource="&rami;fauna"/>
+        <rami:isTypeOf rdf:resource="&rami;organism"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#animate_being -->
+
+    <NamedIndividual rdf:about="&rami;animate_being">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#animate_thing -->
+
+    <NamedIndividual rdf:about="&rami;animate_thing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#appearance -->
+
+    <NamedIndividual rdf:about="&rami;appearance">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;quality"/>
+        <rami:hasSynonym rdf:resource="&rami;visual_aspect"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#appraisal -->
+
+    <NamedIndividual rdf:about="&rami;appraisal">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;assessment"/>
+        <rami:isTypeOf rdf:resource="&rami;classification"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#art -->
+
+    <NamedIndividual rdf:about="&rami;art">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;creation"/>
+        <rami:hasSynonym rdf:resource="&rami;fine_art"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#artefact -->
+
+    <NamedIndividual rdf:about="&rami;artefact">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#artifact -->
+
+    <NamedIndividual rdf:about="&rami;artifact">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;artefact"/>
+        <rami:isTypeOf rdf:resource="&rami;whole"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#artist -->
+
+    <NamedIndividual rdf:about="&rami;artist">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;creative_person"/>
+        <rami:isTypeOf rdf:resource="&rami;creator"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#assemblage -->
+
+    <NamedIndividual rdf:about="&rami;assemblage">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#assessment -->
+
+    <NamedIndividual rdf:about="&rami;assessment">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#associate -->
+
+    <NamedIndividual rdf:about="&rami;associate">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;peer"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#athletics -->
+
+    <NamedIndividual rdf:about="&rami;athletics">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#atmospheric_condition -->
+
+    <NamedIndividual rdf:about="&rami;atmospheric_condition">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#atmospheric_phenomenon -->
+
+    <NamedIndividual rdf:about="&rami;atmospheric_phenomenon">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;physical_phenomenon"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#attainment -->
+
+    <NamedIndividual rdf:about="&rami;attainment">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;accomplishment"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#attribute -->
+
+    <NamedIndividual rdf:about="&rami;attribute">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;abstraction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#attribution -->
+
+    <NamedIndividual rdf:about="&rami;attribution">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#auditory_communication -->
+
+    <NamedIndividual rdf:about="&rami;auditory_communication">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;communication"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#aurora -->
+
+    <NamedIndividual rdf:about="&rami;aurora">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#automatic_data_processing_system -->
+
+    <NamedIndividual rdf:about="&rami;automatic_data_processing_system">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#bandage -->
+
+    <NamedIndividual rdf:about="&rami;bandage">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;dressing"/>
+        <rami:hasSynonym rdf:resource="&rami;patch"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#basic_cognitive_process -->
+
+    <NamedIndividual rdf:about="&rami;basic_cognitive_process">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;process"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#beast -->
+
+    <NamedIndividual rdf:about="&rami;beast">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#being -->
+
+    <NamedIndividual rdf:about="&rami;being">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#bitterness -->
+
+    <NamedIndividual rdf:about="&rami;bitterness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#biz -->
+
+    <NamedIndividual rdf:about="&rami;biz">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#bourgeois -->
+
+    <NamedIndividual rdf:about="&rami;bourgeois">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#break_of_day -->
+
+    <NamedIndividual rdf:about="&rami;break_of_day">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#break_of_the_day -->
+
+    <NamedIndividual rdf:about="&rami;break_of_the_day">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#broadcast -->
+
+    <NamedIndividual rdf:about="&rami;broadcast">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;program"/>
+        <rami:hasSynonym rdf:resource="&rami;programme"/>
+        <rami:isTypeOf rdf:resource="&rami;show"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#brute -->
+
+    <NamedIndividual rdf:about="&rami;brute">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#business -->
+
+    <NamedIndividual rdf:about="&rami;business">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;business_concern"/>
+        <rami:hasSynonym rdf:resource="&rami;business_organisation"/>
+        <rami:hasSynonym rdf:resource="&rami;business_organization"/>
+        <rami:hasSynonym rdf:resource="&rami;concern"/>
+        <rami:isTypeOf rdf:resource="&rami;enterprise"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#business_concern -->
+
+    <NamedIndividual rdf:about="&rami;business_concern">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#business_firm -->
+
+    <NamedIndividual rdf:about="&rami;business_firm">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#business_organisation -->
+
+    <NamedIndividual rdf:about="&rami;business_organisation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#business_organization -->
+
+    <NamedIndividual rdf:about="&rami;business_organization">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#businessman -->
+
+    <NamedIndividual rdf:about="&rami;businessman">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;businessperson"/>
+        <rami:hasSynonym rdf:resource="&rami;man_of_affairs"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#businessperson -->
+
+    <NamedIndividual rdf:about="&rami;businessperson">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;bourgeois"/>
+        <rami:isTypeOf rdf:resource="&rami;capitalist"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#calendar_day -->
+
+    <NamedIndividual rdf:about="&rami;calendar_day">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;civil_day"/>
+        <rami:isTypeOf rdf:resource="&rami;time_period"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#caper -->
+
+    <NamedIndividual rdf:about="&rami;caper">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#capitalist -->
+
+    <NamedIndividual rdf:about="&rami;capitalist">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cast -->
+
+    <NamedIndividual rdf:about="&rami;cast">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;bandage"/>
+        <rami:hasSynonym rdf:resource="&rami;cast_of_characters"/>
+        <rami:hasSynonym rdf:resource="&rami;casting"/>
+        <rami:isTypeOf rdf:resource="&rami;copy"/>
+        <rami:hasSynonym rdf:resource="&rami;dramatis_personae"/>
+        <rami:isTypeOf rdf:resource="&rami;gathering"/>
+        <rami:hasSynonym rdf:resource="&rami;mold"/>
+        <rami:hasSynonym rdf:resource="&rami;plaster_bandage"/>
+        <rami:hasSynonym rdf:resource="&rami;plaster_cast"/>
+        <rami:hasSynonym rdf:resource="&rami;roll"/>
+        <rami:isTypeOf rdf:resource="&rami;solid"/>
+        <rami:hasSynonym rdf:resource="&rami;stamp"/>
+        <rami:isTypeOf rdf:resource="&rami;throw"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cast_of_characters -->
+
+    <NamedIndividual rdf:about="&rami;cast_of_characters">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#casting -->
+
+    <NamedIndividual rdf:about="&rami;casting">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;cast"/>
+        <rami:isTypeOf rdf:resource="&rami;fishing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#categorisation -->
+
+    <NamedIndividual rdf:about="&rami;categorisation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#categorization -->
+
+    <NamedIndividual rdf:about="&rami;categorization">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#category -->
+
+    <NamedIndividual rdf:about="&rami;category">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;concept"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#causal_agency -->
+
+    <NamedIndividual rdf:about="&rami;causal_agency">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#causal_agent -->
+
+    <NamedIndividual rdf:about="&rami;causal_agent">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;causal_agency"/>
+        <rami:hasSynonym rdf:resource="&rami;cause"/>
+        <rami:isTypeOf rdf:resource="&rami;physical_entity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cause -->
+
+    <NamedIndividual rdf:about="&rami;cause">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#check -->
+
+    <NamedIndividual rdf:about="&rami;check">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+        <ace_lexicon:PN_sg>check</ace_lexicon:PN_sg>
+        <rami:isPartOfResource rdf:resource="&rami;Check"/>
+        <rami:hasOutput rdf:resource="&rami;spellcheckCorrections"/>
+        <rami:hasOutput rdf:resource="&rami;spellcheckOriginal"/>
+        <rami:hasOutput rdf:resource="&rami;spellcheckSuggestion"/>
+        <rami:hasInput rdf:resource="&rami;spellcheckText"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#chief -->
+
+    <NamedIndividual rdf:about="&rami;chief">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#chill -->
+
+    <NamedIndividual rdf:about="&rami;chill">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;coldness"/>
+        <rami:hasSynonym rdf:resource="&rami;gelidity"/>
+        <rami:hasSynonym rdf:resource="&rami;iciness"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#chopine -->
+
+    <NamedIndividual rdf:about="&rami;chopine">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;platform"/>
+        <rami:isTypeOf rdf:resource="&rami;shoe"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#city -->
+
+    <NamedIndividual rdf:about="&rami;city">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;metropolis"/>
+        <rami:isTypeOf rdf:resource="&rami;municipality"/>
+        <rami:hasSynonym rdf:resource="&rami;urban_center"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#civil_day -->
+
+    <NamedIndividual rdf:about="&rami;civil_day">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#classification -->
+
+    <NamedIndividual rdf:about="&rami;classification">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;basic_cognitive_process"/>
+        <rami:hasSynonym rdf:resource="&rami;categorisation"/>
+        <rami:hasSynonym rdf:resource="&rami;categorization"/>
+        <rami:hasSynonym rdf:resource="&rami;sorting"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#clock_time -->
+
+    <NamedIndividual rdf:about="&rami;clock_time">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;reading"/>
+        <rami:hasSynonym rdf:resource="&rami;time"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cloth_covering -->
+
+    <NamedIndividual rdf:about="&rami;cloth_covering">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;covering"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cockcrow -->
+
+    <NamedIndividual rdf:about="&rami;cockcrow">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#code -->
+
+    <NamedIndividual rdf:about="&rami;code">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;coding_system"/>
+        <rami:hasSynonym rdf:resource="&rami;computer_code"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#coding_system -->
+
+    <NamedIndividual rdf:about="&rami;coding_system">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;writing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cognition -->
+
+    <NamedIndividual rdf:about="&rami;cognition">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;knowledge"/>
+        <rami:hasSynonym rdf:resource="&rami;noesis"/>
+        <rami:isTypeOf rdf:resource="&rami;psychological_feature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cognitive_content -->
+
+    <NamedIndividual rdf:about="&rami;cognitive_content">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cognitive_operation -->
+
+    <NamedIndividual rdf:about="&rami;cognitive_operation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cognitive_process -->
+
+    <NamedIndividual rdf:about="&rami;cognitive_process">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#cold -->
+
+    <NamedIndividual rdf:about="&rami;cold">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#coldness -->
+
+    <NamedIndividual rdf:about="&rami;coldness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;cold"/>
+        <rami:hasSynonym rdf:resource="&rami;frigidity"/>
+        <rami:hasSynonym rdf:resource="&rami;frigidness"/>
+        <rami:hasSynonym rdf:resource="&rami;low_temperature"/>
+        <rami:isTypeOf rdf:resource="&rami;temperature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#collection -->
+
+    <NamedIndividual rdf:about="&rami;collection">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;accumulation"/>
+        <rami:hasSynonym rdf:resource="&rami;aggregation"/>
+        <rami:hasSynonym rdf:resource="&rami;assemblage"/>
+        <rami:isTypeOf rdf:resource="&rami;group"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#committee_member -->
+
+    <NamedIndividual rdf:about="&rami;committee_member">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;member"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#communication -->
+
+    <NamedIndividual rdf:about="&rami;communication">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;abstraction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#compeer -->
+
+    <NamedIndividual rdf:about="&rami;compeer">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#competition -->
+
+    <NamedIndividual rdf:about="&rami;competition">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#composition -->
+
+    <NamedIndividual rdf:about="&rami;composition">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#computer_address -->
+
+    <NamedIndividual rdf:about="&rami;computer_address">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#computer_code -->
+
+    <NamedIndividual rdf:about="&rami;computer_code">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#computer_system -->
+
+    <NamedIndividual rdf:about="&rami;computer_system">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;ADPS"/>
+        <rami:hasSynonym rdf:resource="&rami;ADP_system"/>
+        <rami:hasSynonym rdf:resource="&rami;automatic_data_processing_system"/>
+        <rami:hasSynonym rdf:resource="&rami;computing_system"/>
+        <rami:isTypeOf rdf:resource="&rami;system"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#computing_system -->
+
+    <NamedIndividual rdf:about="&rami;computing_system">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#concave_shape -->
+
+    <NamedIndividual rdf:about="&rami;concave_shape">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;concavity"/>
+        <rami:hasSynonym rdf:resource="&rami;incurvation"/>
+        <rami:hasSynonym rdf:resource="&rami;incurvature"/>
+        <rami:isTypeOf rdf:resource="&rami;solid"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#concavity -->
+
+    <NamedIndividual rdf:about="&rami;concavity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#concept -->
+
+    <NamedIndividual rdf:about="&rami;concept">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;conception"/>
+        <rami:hasSynonym rdf:resource="&rami;construct"/>
+        <rami:isTypeOf rdf:resource="&rami;idea"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#conception -->
+
+    <NamedIndividual rdf:about="&rami;conception">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#concern -->
+
+    <NamedIndividual rdf:about="&rami;concern">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#condition -->
+
+    <NamedIndividual rdf:about="&rami;condition">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;state"/>
+        <rami:hasSynonym rdf:resource="&rami;status"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#conductor -->
+
+    <NamedIndividual rdf:about="&rami;conductor">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;director"/>
+        <rami:hasSynonym rdf:resource="&rami;music_director"/>
+        <rami:isTypeOf rdf:resource="&rami;musician"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#conquest -->
+
+    <NamedIndividual rdf:about="&rami;conquest">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#construct -->
+
+    <NamedIndividual rdf:about="&rami;construct">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#construction -->
+
+    <NamedIndividual rdf:about="&rami;construction">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#container -->
+
+    <NamedIndividual rdf:about="&rami;container">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;instrumentality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#content -->
+
+    <NamedIndividual rdf:about="&rami;content">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;cognition"/>
+        <rami:hasSynonym rdf:resource="&rami;cognitive_content"/>
+        <rami:hasSynonym rdf:resource="&rami;mental_object"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#contest -->
+
+    <NamedIndividual rdf:about="&rami;contest">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;competition"/>
+        <rami:isTypeOf rdf:resource="&rami;social_event"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#continuance -->
+
+    <NamedIndividual rdf:about="&rami;continuance">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#copy -->
+
+    <NamedIndividual rdf:about="&rami;copy">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;representation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#country -->
+
+    <NamedIndividual rdf:about="&rami;country">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;administrative_district"/>
+        <rami:hasSynonym rdf:resource="&rami;land"/>
+        <rami:hasSynonym rdf:resource="&rami;state"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#covering -->
+
+    <NamedIndividual rdf:about="&rami;covering">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;artifact"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#creation -->
+
+    <NamedIndividual rdf:about="&rami;creation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;artifact"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#creative_person -->
+
+    <NamedIndividual rdf:about="&rami;creative_person">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#creator -->
+
+    <NamedIndividual rdf:about="&rami;creator">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#creature -->
+
+    <NamedIndividual rdf:about="&rami;creature">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#currentWeather -->
+
+    <NamedIndividual rdf:about="&rami;currentWeather">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#data_point -->
+
+    <NamedIndividual rdf:about="&rami;data_point">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#date -->
+
+    <NamedIndividual rdf:about="&rami;date">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;day"/>
+        <rami:hasSynonym rdf:resource="&rami;day_of_the_month"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#datum -->
+
+    <NamedIndividual rdf:about="&rami;datum">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;data_point"/>
+        <rami:isTypeOf rdf:resource="&rami;information"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#dawn -->
+
+    <NamedIndividual rdf:about="&rami;dawn">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;aurora"/>
+        <rami:hasSynonym rdf:resource="&rami;break_of_day"/>
+        <rami:hasSynonym rdf:resource="&rami;break_of_the_day"/>
+        <rami:hasSynonym rdf:resource="&rami;cockcrow"/>
+        <rami:hasSynonym rdf:resource="&rami;dawning"/>
+        <rami:hasSynonym rdf:resource="&rami;daybreak"/>
+        <rami:hasSynonym rdf:resource="&rami;dayspring"/>
+        <rami:hasSynonym rdf:resource="&rami;first_light"/>
+        <rami:isTypeOf rdf:resource="&rami;hour"/>
+        <rami:hasSynonym rdf:resource="&rami;morning"/>
+        <rami:hasSynonym rdf:resource="&rami;sunrise"/>
+        <rami:hasSynonym rdf:resource="&rami;sunup"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#dawning -->
+
+    <NamedIndividual rdf:about="&rami;dawning">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#day -->
+
+    <NamedIndividual rdf:about="&rami;day">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;24-hour_interval"/>
+        <rami:hasSynonym rdf:resource="&rami;mean_solar_day"/>
+        <rami:hasSynonym rdf:resource="&rami;solar_day"/>
+        <rami:isTypeOf rdf:resource="&rami;time_unit"/>
+        <rami:hasSynonym rdf:resource="&rami;twenty-four_hour_period"/>
+        <rami:hasSynonym rdf:resource="&rami;twenty-four_hours"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#dayWeather -->
+
+    <NamedIndividual rdf:about="&rami;dayWeather">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#day_of_the_month -->
+
+    <NamedIndividual rdf:about="&rami;day_of_the_month">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#daybreak -->
+
+    <NamedIndividual rdf:about="&rami;daybreak">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#days_of_the_week -->
+
+    <NamedIndividual rdf:about="&rami;days_of_the_week">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;calendar_day"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#dayspring -->
+
+    <NamedIndividual rdf:about="&rami;dayspring">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#debt -->
+
+    <NamedIndividual rdf:about="&rami;debt">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;liabilities"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#decision_maker -->
+
+    <NamedIndividual rdf:about="&rami;decision_maker">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#deed -->
+
+    <NamedIndividual rdf:about="&rami;deed">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;accomplishment"/>
+        <rami:hasSynonym rdf:resource="&rami;effort"/>
+        <rami:hasSynonym rdf:resource="&rami;exploit"/>
+        <rami:hasSynonym rdf:resource="&rami;feat"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#define -->
+
+    <NamedIndividual rdf:about="&rami;define">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+        <ace_lexicon:PN_sg>define</ace_lexicon:PN_sg>
+        <rami:isPartOfResource rdf:resource="&rami;Define"/>
+        <rami:hasOutput rdf:resource="&rami;defineAttribution"/>
+        <rami:hasOutput rdf:resource="&rami;defineText"/>
+        <rami:hasInput rdf:resource="&rami;defineWord"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#defineAttribution -->
+
+    <NamedIndividual rdf:about="&rami;defineAttribution">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">attribution</rami:Label>
+        <ace_lexicon:PN_sg>defineAttribution</ace_lexicon:PN_sg>
+        <rami:isEquivalent rdf:resource="&rami;attribution"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#defineText -->
+
+    <NamedIndividual rdf:about="&rami;defineText">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">text</rami:Label>
+        <ace_lexicon:PN_sg>defineText</ace_lexicon:PN_sg>
+        <rami:isEquivalent rdf:resource="&rami;definition"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#defineWord -->
+
+    <NamedIndividual rdf:about="&rami;defineWord">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">word</rami:Label>
+        <ace_lexicon:PN_sg>defineWord</ace_lexicon:PN_sg>
+        <rami:isEquivalent rdf:resource="&rami;entity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#definite_quantity -->
+
+    <NamedIndividual rdf:about="&rami;definite_quantity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;measure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#definition -->
+
+    <NamedIndividual rdf:about="&rami;definition">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;explanation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#dent -->
+
+    <NamedIndividual rdf:about="&rami;dent">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#depression -->
+
+    <NamedIndividual rdf:about="&rami;depression">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;concave_shape"/>
+        <rami:hasSynonym rdf:resource="&rami;impression"/>
+        <rami:hasSynonym rdf:resource="&rami;imprint"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#developer -->
+
+    <NamedIndividual rdf:about="&rami;developer">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;creator"/>
+        <rami:isTypeOf rdf:resource="&rami;photographic_equipment"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#device -->
+
+    <NamedIndividual rdf:about="&rami;device">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;expressive_style"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#director -->
+
+    <NamedIndividual rdf:about="&rami;director">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;administrator"/>
+        <rami:isTypeOf rdf:resource="&rami;committee_member"/>
+        <rami:hasSynonym rdf:resource="&rami;manager"/>
+        <rami:hasSynonym rdf:resource="&rami;managing_director"/>
+        <rami:isTypeOf rdf:resource="&rami;supervisor"/>
+        <rami:hasSynonym rdf:resource="&rami;theater_director"/>
+        <rami:hasSynonym rdf:resource="&rami;theatre_director"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#district -->
+
+    <NamedIndividual rdf:about="&rami;district">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;dominion"/>
+        <rami:isTypeOf rdf:resource="&rami;region"/>
+        <rami:hasSynonym rdf:resource="&rami;territorial_dominion"/>
+        <rami:hasSynonym rdf:resource="&rami;territory"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#diversion -->
+
+    <NamedIndividual rdf:about="&rami;diversion">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;activity"/>
+        <rami:hasSynonym rdf:resource="&rami;recreation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#document -->
+
+    <NamedIndividual rdf:about="&rami;document">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;papers"/>
+        <rami:isTypeOf rdf:resource="&rami;writing"/>
+        <rami:hasSynonym rdf:resource="&rami;written_document"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#dominion -->
+
+    <NamedIndividual rdf:about="&rami;dominion">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#double -->
+
+    <NamedIndividual rdf:about="&rami;double">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;image"/>
+        <rami:hasSynonym rdf:resource="&rami;look-alike"/>
+        <rami:isTypeOf rdf:resource="&rami;person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#dramatis_personae -->
+
+    <NamedIndividual rdf:about="&rami;dramatis_personae">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#dressing -->
+
+    <NamedIndividual rdf:about="&rami;dressing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;cloth_covering"/>
+        <rami:hasSynonym rdf:resource="&rami;medical_dressing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#duration -->
+
+    <NamedIndividual rdf:about="&rami;duration">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;continuance"/>
+        <rami:hasSynonym rdf:resource="&rami;length"/>
+        <rami:isTypeOf rdf:resource="&rami;temporal_property"/>
+        <rami:isTypeOf rdf:resource="&rami;time"/>
+        <rami:isTypeOf rdf:resource="&rami;time_period"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#effect -->
+
+    <NamedIndividual rdf:about="&rami;effect">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#effigy -->
+
+    <NamedIndividual rdf:about="&rami;effigy">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;image"/>
+        <rami:isTypeOf rdf:resource="&rami;representation"/>
+        <rami:hasSynonym rdf:resource="&rami;simulacrum"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#effort -->
+
+    <NamedIndividual rdf:about="&rami;effort">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#emotion -->
+
+    <NamedIndividual rdf:about="&rami;emotion">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;feeling"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#enmity -->
+
+    <NamedIndividual rdf:about="&rami;enmity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#enterprise -->
+
+    <NamedIndividual rdf:about="&rami;enterprise">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;organization"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#entity -->
+
+    <NamedIndividual rdf:about="&rami;entity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#epitome -->
+
+    <NamedIndividual rdf:about="&rami;epitome">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#equal -->
+
+    <NamedIndividual rdf:about="&rami;equal">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#equipment -->
+
+    <NamedIndividual rdf:about="&rami;equipment">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;instrumentality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#evaluation -->
+
+    <NamedIndividual rdf:about="&rami;evaluation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;appraisal"/>
+        <rami:isTypeOf rdf:resource="&rami;judgment"/>
+        <rami:hasSynonym rdf:resource="&rami;rating"/>
+        <rami:hasSynonym rdf:resource="&rami;valuation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#event -->
+
+    <NamedIndividual rdf:about="&rami;event">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;psychological_feature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#evildoing -->
+
+    <NamedIndividual rdf:about="&rami;evildoing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#example -->
+
+    <NamedIndividual rdf:about="&rami;example">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#explanation -->
+
+    <NamedIndividual rdf:about="&rami;explanation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;account"/>
+        <rami:isTypeOf rdf:resource="&rami;statement"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#exploit -->
+
+    <NamedIndividual rdf:about="&rami;exploit">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#expressive_style -->
+
+    <NamedIndividual rdf:about="&rami;expressive_style">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;communication"/>
+        <rami:hasSynonym rdf:resource="&rami;style"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#fact -->
+
+    <NamedIndividual rdf:about="&rami;fact">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;information"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#fauna -->
+
+    <NamedIndividual rdf:about="&rami;fauna">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#feat -->
+
+    <NamedIndividual rdf:about="&rami;feat">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#feeling -->
+
+    <NamedIndividual rdf:about="&rami;feeling">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;state"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#field_sport -->
+
+    <NamedIndividual rdf:about="&rami;field_sport">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#figure -->
+
+    <NamedIndividual rdf:about="&rami;figure">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#figure_of_speech -->
+
+    <NamedIndividual rdf:about="&rami;figure_of_speech">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#film -->
+
+    <NamedIndividual rdf:about="&rami;film">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#film_director -->
+
+    <NamedIndividual rdf:about="&rami;film_director">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;director"/>
+        <rami:isTypeOf rdf:resource="&rami;film_maker"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#film_maker -->
+
+    <NamedIndividual rdf:about="&rami;film_maker">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;film_producer"/>
+        <rami:hasSynonym rdf:resource="&rami;filmmaker"/>
+        <rami:hasSynonym rdf:resource="&rami;movie_maker"/>
+        <rami:isTypeOf rdf:resource="&rami;producer"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#film_producer -->
+
+    <NamedIndividual rdf:about="&rami;film_producer">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#filmmaker -->
+
+    <NamedIndividual rdf:about="&rami;filmmaker">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#fine_art -->
+
+    <NamedIndividual rdf:about="&rami;fine_art">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#firm -->
+
+    <NamedIndividual rdf:about="&rami;firm">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;business"/>
+        <rami:hasSynonym rdf:resource="&rami;business_firm"/>
+        <rami:hasSynonym rdf:resource="&rami;house"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#first_light -->
+
+    <NamedIndividual rdf:about="&rami;first_light">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#fishing -->
+
+    <NamedIndividual rdf:about="&rami;fishing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;outdoor_sport"/>
+        <rami:hasSynonym rdf:resource="&rami;sportfishing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#flick -->
+
+    <NamedIndividual rdf:about="&rami;flick">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#food -->
+
+    <NamedIndividual rdf:about="&rami;food">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;solid"/>
+        <rami:hasSynonym rdf:resource="&rami;solid_food"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#footgear -->
+
+    <NamedIndividual rdf:about="&rami;footgear">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#footwear -->
+
+    <NamedIndividual rdf:about="&rami;footwear">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;covering"/>
+        <rami:hasSynonym rdf:resource="&rami;footgear"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#force_per_unit_area -->
+
+    <NamedIndividual rdf:about="&rami;force_per_unit_area">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#form -->
+
+    <NamedIndividual rdf:about="&rami;form">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;appearance"/>
+        <rami:hasSynonym rdf:resource="&rami;cast"/>
+        <rami:hasSynonym rdf:resource="&rami;shape"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#frigidity -->
+
+    <NamedIndividual rdf:about="&rami;frigidity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#frigidness -->
+
+    <NamedIndividual rdf:about="&rami;frigidness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#frolic -->
+
+    <NamedIndividual rdf:about="&rami;frolic">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#fundamental_measure -->
+
+    <NamedIndividual rdf:about="&rami;fundamental_measure">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#fundamental_quantity -->
+
+    <NamedIndividual rdf:about="&rami;fundamental_quantity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;fundamental_measure"/>
+        <rami:isTypeOf rdf:resource="&rami;measure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#gall -->
+
+    <NamedIndividual rdf:about="&rami;gall">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#gambling -->
+
+    <NamedIndividual rdf:about="&rami;gambling">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;diversion"/>
+        <rami:hasSynonym rdf:resource="&rami;gaming"/>
+        <rami:hasSynonym rdf:resource="&rami;play"/>
+        <rami:isTypeOf rdf:resource="&rami;vice"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#gambol -->
+
+    <NamedIndividual rdf:about="&rami;gambol">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#game -->
+
+    <NamedIndividual rdf:about="&rami;game">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;activity"/>
+        <rami:isTypeOf rdf:resource="&rami;animal"/>
+        <rami:hasSynonym rdf:resource="&rami;biz"/>
+        <rami:isTypeOf rdf:resource="&rami;contest"/>
+        <rami:isTypeOf rdf:resource="&rami;diversion"/>
+        <rami:isTypeOf rdf:resource="&rami;game_equipment"/>
+        <rami:isTypeOf rdf:resource="&rami;meat"/>
+        <rami:isTypeOf rdf:resource="&rami;occupation"/>
+        <rami:isTypeOf rdf:resource="&rami;play"/>
+        <rami:isTypeOf rdf:resource="&rami;score"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#game_equipment -->
+
+    <NamedIndividual rdf:about="&rami;game_equipment">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;equipment"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#gaming -->
+
+    <NamedIndividual rdf:about="&rami;gaming">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#gathering -->
+
+    <NamedIndividual rdf:about="&rami;gathering">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;assemblage"/>
+        <rami:isTypeOf rdf:resource="&rami;social_group"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#gelidity -->
+
+    <NamedIndividual rdf:about="&rami;gelidity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#genre -->
+
+    <NamedIndividual rdf:about="&rami;genre">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;art"/>
+        <rami:isTypeOf rdf:resource="&rami;kind"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geographic_area -->
+
+    <NamedIndividual rdf:about="&rami;geographic_area">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geographic_region -->
+
+    <NamedIndividual rdf:about="&rami;geographic_region">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geographical_area -->
+
+    <NamedIndividual rdf:about="&rami;geographical_area">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;geographic_area"/>
+        <rami:hasSynonym rdf:resource="&rami;geographic_region"/>
+        <rami:hasSynonym rdf:resource="&rami;geographical_region"/>
+        <rami:isTypeOf rdf:resource="&rami;region"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geographical_region -->
+
+    <NamedIndividual rdf:about="&rami;geographical_region">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geographical_zone -->
+
+    <NamedIndividual rdf:about="&rami;geographical_zone">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geolocationCountry -->
+
+    <NamedIndividual rdf:about="&rami;geolocationCountry">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">c</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;country"/>
+        <rami:isOutputTo rdf:resource="&rami;getFirstLocation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geolocationLatitude -->
+
+    <NamedIndividual rdf:about="&rami;geolocationLatitude">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">lat</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;getFirstLocation"/>
+        <rami:isEquivalent rdf:resource="&rami;latitude"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geolocationLocation -->
+
+    <NamedIndividual rdf:about="&rami;geolocationLocation">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">location</rami:Label>
+        <rami:isInputTo rdf:resource="&rami;getFirstLocation"/>
+        <rami:isEquivalent rdf:resource="&rami;urban_area"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geolocationLongitude -->
+
+    <NamedIndividual rdf:about="&rami;geolocationLongitude">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">lon</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;getFirstLocation"/>
+        <rami:isEquivalent rdf:resource="&rami;longitude"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geolocationName -->
+
+    <NamedIndividual rdf:about="&rami;geolocationName">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">name</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;getFirstLocation"/>
+        <rami:isEquivalent rdf:resource="&rami;location"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geolocationTimeZone -->
+
+    <NamedIndividual rdf:about="&rami;geolocationTimeZone">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">tzs</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;getFirstLocation"/>
+        <rami:isEquivalent rdf:resource="&rami;time_zone"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#geolocationType -->
+
+    <NamedIndividual rdf:about="&rami;geolocationType">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">type</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;administrative_district"/>
+        <rami:isOutputTo rdf:resource="&rami;getFirstLocation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#getFirstLocation -->
+
+    <NamedIndividual rdf:about="&rami;getFirstLocation">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#getLocation -->
+
+    <NamedIndividual rdf:about="&rami;getLocation">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+        <rami:hasInput rdf:resource="&rami;googlegeocodeAddress"/>
+        <rami:hasOutput rdf:resource="&rami;googlegeocodeLat"/>
+        <rami:hasOutput rdf:resource="&rami;googlegeocodeLng"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#getNews -->
+
+    <NamedIndividual rdf:about="&rami;getNews">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+        <rami:isPartOfResource rdf:resource="&rami;AlchemyNews"/>
+        <rami:hasInput rdf:resource="&rami;alchemyNewsKeywords"/>
+        <rami:hasOutput rdf:resource="&rami;alchemyNewsText"/>
+        <rami:hasOutput rdf:resource="&rami;alchemyNewsTitle"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#googlegeocodeAddress -->
+
+    <NamedIndividual rdf:about="&rami;googlegeocodeAddress">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">address</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;location"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#googlegeocodeLat -->
+
+    <NamedIndividual rdf:about="&rami;googlegeocodeLat">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">lat</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;latitude"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#googlegeocodeLng -->
+
+    <NamedIndividual rdf:about="&rami;googlegeocodeLng">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">lng</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;longitude"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#grade -->
+
+    <NamedIndividual rdf:about="&rami;grade">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#grievance -->
+
+    <NamedIndividual rdf:about="&rami;grievance">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#ground -->
+
+    <NamedIndividual rdf:about="&rami;ground">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#group -->
+
+    <NamedIndividual rdf:about="&rami;group">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;abstraction"/>
+        <rami:hasSynonym rdf:resource="&rami;grouping"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#grouping -->
+
+    <NamedIndividual rdf:about="&rami;grouping">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#grownup -->
+
+    <NamedIndividual rdf:about="&rami;grownup">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#grudge -->
+
+    <NamedIndividual rdf:about="&rami;grudge">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;grievance"/>
+        <rami:isTypeOf rdf:resource="&rami;resentment"/>
+        <rami:hasSynonym rdf:resource="&rami;score"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hate -->
+
+    <NamedIndividual rdf:about="&rami;hate">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;emotion"/>
+        <rami:hasSynonym rdf:resource="&rami;hatred"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hatred -->
+
+    <NamedIndividual rdf:about="&rami;hatred">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#head -->
+
+    <NamedIndividual rdf:about="&rami;head">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;chief"/>
+        <rami:isTypeOf rdf:resource="&rami;leader"/>
+        <rami:hasSynonym rdf:resource="&rami;top_dog"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#higher-up -->
+
+    <NamedIndividual rdf:about="&rami;higher-up">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#horizontal_surface -->
+
+    <NamedIndividual rdf:about="&rami;horizontal_surface">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;level"/>
+        <rami:isTypeOf rdf:resource="&rami;surface"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hostility -->
+
+    <NamedIndividual rdf:about="&rami;hostility">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;enmity"/>
+        <rami:isTypeOf rdf:resource="&rami;hate"/>
+        <rami:hasSynonym rdf:resource="&rami;ill_will"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hour -->
+
+    <NamedIndividual rdf:about="&rami;hour">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;clock_time"/>
+        <rami:hasSynonym rdf:resource="&rami;time_of_day"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#house -->
+
+    <NamedIndividual rdf:about="&rami;house">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#human_action -->
+
+    <NamedIndividual rdf:about="&rami;human_action">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#human_activity -->
+
+    <NamedIndividual rdf:about="&rami;human_activity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#humidity -->
+
+    <NamedIndividual rdf:about="&rami;humidity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;humidness"/>
+        <rami:isTypeOf rdf:resource="&rami;wetness"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#humidness -->
+
+    <NamedIndividual rdf:about="&rami;humidness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#hurl -->
+
+    <NamedIndividual rdf:about="&rami;hurl">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;cast"/>
+        <rami:isTypeOf rdf:resource="&rami;throw"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#iciness -->
+
+    <NamedIndividual rdf:about="&rami;iciness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#icon -->
+
+    <NamedIndividual rdf:about="&rami;icon">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#idea -->
+
+    <NamedIndividual rdf:about="&rami;idea">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;content"/>
+        <rami:hasSynonym rdf:resource="&rami;thought"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#ikon -->
+
+    <NamedIndividual rdf:about="&rami;ikon">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#ill_will -->
+
+    <NamedIndividual rdf:about="&rami;ill_will">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#image -->
+
+    <NamedIndividual rdf:about="&rami;image">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;impression"/>
+        <rami:hasSynonym rdf:resource="&rami;mental_image"/>
+        <rami:isTypeOf rdf:resource="&rami;representation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#impression -->
+
+    <NamedIndividual rdf:about="&rami;impression">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;appearance"/>
+        <rami:hasSynonym rdf:resource="&rami;effect"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#imprint -->
+
+    <NamedIndividual rdf:about="&rami;imprint">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#incision -->
+
+    <NamedIndividual rdf:about="&rami;incision">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;dent"/>
+        <rami:isTypeOf rdf:resource="&rami;depression"/>
+        <rami:hasSynonym rdf:resource="&rami;prick"/>
+        <rami:hasSynonym rdf:resource="&rami;scratch"/>
+        <rami:hasSynonym rdf:resource="&rami;slit"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#incurvation -->
+
+    <NamedIndividual rdf:about="&rami;incurvation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#incurvature -->
+
+    <NamedIndividual rdf:about="&rami;incurvature">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#indication -->
+
+    <NamedIndividual rdf:about="&rami;indication">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#individual -->
+
+    <NamedIndividual rdf:about="&rami;individual">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#info -->
+
+    <NamedIndividual rdf:about="&rami;info">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#information -->
+
+    <NamedIndividual rdf:about="&rami;information">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;cognition"/>
+        <rami:hasSynonym rdf:resource="&rami;info"/>
+        <rami:isTypeOf rdf:resource="&rami;message"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#instrumentality -->
+
+    <NamedIndividual rdf:about="&rami;instrumentality">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;artifact"/>
+        <rami:hasSynonym rdf:resource="&rami;instrumentation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#instrumentation -->
+
+    <NamedIndividual rdf:about="&rami;instrumentation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#intelligence -->
+
+    <NamedIndividual rdf:about="&rami;intelligence">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#interest -->
+
+    <NamedIndividual rdf:about="&rami;interest">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;interestingness"/>
+        <rami:isTypeOf rdf:resource="&rami;power"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#interestingness -->
+
+    <NamedIndividual rdf:about="&rami;interestingness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#internal_representation -->
+
+    <NamedIndividual rdf:about="&rami;internal_representation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#job -->
+
+    <NamedIndividual rdf:about="&rami;job">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#judgement -->
+
+    <NamedIndividual rdf:about="&rami;judgement">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#judgment -->
+
+    <NamedIndividual rdf:about="&rami;judgment">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;act"/>
+        <rami:hasSynonym rdf:resource="&rami;assessment"/>
+        <rami:hasSynonym rdf:resource="&rami;judgement"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#kind -->
+
+    <NamedIndividual rdf:about="&rami;kind">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;category"/>
+        <rami:hasSynonym rdf:resource="&rami;form"/>
+        <rami:hasSynonym rdf:resource="&rami;sort"/>
+        <rami:hasSynonym rdf:resource="&rami;variety"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#knowledge -->
+
+    <NamedIndividual rdf:about="&rami;knowledge">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#land -->
+
+    <NamedIndividual rdf:about="&rami;land">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#latitude -->
+
+    <NamedIndividual rdf:about="&rami;latitude">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#leader -->
+
+    <NamedIndividual rdf:about="&rami;leader">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#length -->
+
+    <NamedIndividual rdf:about="&rami;length">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#level -->
+
+    <NamedIndividual rdf:about="&rami;level">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#liabilities -->
+
+    <NamedIndividual rdf:about="&rami;liabilities">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;possession"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#line -->
+
+    <NamedIndividual rdf:about="&rami;line">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#line_of_work -->
+
+    <NamedIndividual rdf:about="&rami;line_of_work">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#literary_genre -->
+
+    <NamedIndividual rdf:about="&rami;literary_genre">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#living_thing -->
+
+    <NamedIndividual rdf:about="&rami;living_thing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;animate_thing"/>
+        <rami:isTypeOf rdf:resource="&rami;object"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#location -->
+
+    <NamedIndividual rdf:about="&rami;location">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;object"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#longitude -->
+
+    <NamedIndividual rdf:about="&rami;longitude">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#look-alike -->
+
+    <NamedIndividual rdf:about="&rami;look-alike">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#low_temperature -->
+
+    <NamedIndividual rdf:about="&rami;low_temperature">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#man_of_affairs -->
+
+    <NamedIndividual rdf:about="&rami;man_of_affairs">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#manager -->
+
+    <NamedIndividual rdf:about="&rami;manager">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#managing_director -->
+
+    <NamedIndividual rdf:about="&rami;managing_director">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mark -->
+
+    <NamedIndividual rdf:about="&rami;mark">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;evaluation"/>
+        <rami:hasSynonym rdf:resource="&rami;grade"/>
+        <rami:hasSynonym rdf:resource="&rami;score"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#matacriticCast -->
+
+    <NamedIndividual rdf:about="&rami;matacriticCast">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">cast</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;cast"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#match -->
+
+    <NamedIndividual rdf:about="&rami;match">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#matter -->
+
+    <NamedIndividual rdf:about="&rami;matter">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mean_solar_day -->
+
+    <NamedIndividual rdf:about="&rami;mean_solar_day">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#measure -->
+
+    <NamedIndividual rdf:about="&rami;measure">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;abstraction"/>
+        <rami:hasSynonym rdf:resource="&rami;amount"/>
+        <rami:hasSynonym rdf:resource="&rami;quantity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#meat -->
+
+    <NamedIndividual rdf:about="&rami;meat">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;food"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#medical_dressing -->
+
+    <NamedIndividual rdf:about="&rami;medical_dressing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#member -->
+
+    <NamedIndividual rdf:about="&rami;member">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;associate"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mental_image -->
+
+    <NamedIndividual rdf:about="&rami;mental_image">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mental_object -->
+
+    <NamedIndividual rdf:about="&rami;mental_object">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mental_process -->
+
+    <NamedIndividual rdf:about="&rami;mental_process">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mental_representation -->
+
+    <NamedIndividual rdf:about="&rami;mental_representation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#message -->
+
+    <NamedIndividual rdf:about="&rami;message">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;communication"/>
+        <rami:hasSynonym rdf:resource="&rami;content"/>
+        <rami:hasSynonym rdf:resource="&rami;subject_matter"/>
+        <rami:hasSynonym rdf:resource="&rami;substance"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticDeveloper -->
+
+    <NamedIndividual rdf:about="&rami;metacriticDeveloper">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">developer</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;developer"/>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticDirector -->
+
+    <NamedIndividual rdf:about="&rami;metacriticDirector">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">director</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;director"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticGame -->
+
+    <NamedIndividual rdf:about="&rami;metacriticGame">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">title</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;video_game"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticGenre -->
+
+    <NamedIndividual rdf:about="&rami;metacriticGenre">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">genre</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;genre"/>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticMovie -->
+
+    <NamedIndividual rdf:about="&rami;metacriticMovie">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">title</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;movie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticPlatform -->
+
+    <NamedIndividual rdf:about="&rami;metacriticPlatform">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">platform</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;platform"/>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticPublisher -->
+
+    <NamedIndividual rdf:about="&rami;metacriticPublisher">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">publisher</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;publisher"/>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticRating -->
+
+    <NamedIndividual rdf:about="&rami;metacriticRating">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">rating</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;rating"/>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticReleaseDate -->
+
+    <NamedIndividual rdf:about="&rami;metacriticReleaseDate">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">rlsdate</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;release_date"/>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticRuntime -->
+
+    <NamedIndividual rdf:about="&rami;metacriticRuntime">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">runtime</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;duration"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticScore -->
+
+    <NamedIndividual rdf:about="&rami;metacriticScore">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">score</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;score"/>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticSummary -->
+
+    <NamedIndividual rdf:about="&rami;metacriticSummary">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">summary</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+        <rami:isEquivalent rdf:resource="&rami;summary"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticURL -->
+
+    <NamedIndividual rdf:about="&rami;metacriticURL">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">url</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;URL"/>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metacriticUserScore -->
+
+    <NamedIndividual rdf:about="&rami;metacriticUserScore">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">userscore</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;searchGame"/>
+        <rami:isOutputTo rdf:resource="&rami;searchMovie"/>
+        <rami:isEquivalent rdf:resource="&rami;user_score"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#meter_reading -->
+
+    <NamedIndividual rdf:about="&rami;meter_reading">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#metropolis -->
+
+    <NamedIndividual rdf:about="&rami;metropolis">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#military_rank -->
+
+    <NamedIndividual rdf:about="&rami;military_rank">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;military_rating"/>
+        <rami:hasSynonym rdf:resource="&rami;paygrade"/>
+        <rami:isTypeOf rdf:resource="&rami;rank"/>
+        <rami:hasSynonym rdf:resource="&rami;rating"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#military_rating -->
+
+    <NamedIndividual rdf:about="&rami;military_rating">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#misconduct -->
+
+    <NamedIndividual rdf:about="&rami;misconduct">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#model -->
+
+    <NamedIndividual rdf:about="&rami;model">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;example"/>
+        <rami:isTypeOf rdf:resource="&rami;representation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mold -->
+
+    <NamedIndividual rdf:about="&rami;mold">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;cast"/>
+        <rami:isTypeOf rdf:resource="&rami;container"/>
+        <rami:hasSynonym rdf:resource="&rami;mould"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#morning -->
+
+    <NamedIndividual rdf:about="&rami;morning">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mortal -->
+
+    <NamedIndividual rdf:about="&rami;mortal">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#motion-picture_show -->
+
+    <NamedIndividual rdf:about="&rami;motion-picture_show">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#motion_picture -->
+
+    <NamedIndividual rdf:about="&rami;motion_picture">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#motivation -->
+
+    <NamedIndividual rdf:about="&rami;motivation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;motive"/>
+        <rami:hasSynonym rdf:resource="&rami;need"/>
+        <rami:isTypeOf rdf:resource="&rami;psychological_feature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#motive -->
+
+    <NamedIndividual rdf:about="&rami;motive">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#mould -->
+
+    <NamedIndividual rdf:about="&rami;mould">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#movie -->
+
+    <NamedIndividual rdf:about="&rami;movie">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;film"/>
+        <rami:hasSynonym rdf:resource="&rami;flick"/>
+        <rami:hasSynonym rdf:resource="&rami;motion-picture_show"/>
+        <rami:hasSynonym rdf:resource="&rami;motion_picture"/>
+        <rami:hasSynonym rdf:resource="&rami;moving-picture_show"/>
+        <rami:hasSynonym rdf:resource="&rami;moving_picture"/>
+        <rami:hasSynonym rdf:resource="&rami;pic"/>
+        <rami:hasSynonym rdf:resource="&rami;picture"/>
+        <rami:hasSynonym rdf:resource="&rami;picture_show"/>
+        <rami:isTypeOf rdf:resource="&rami;show"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#movie_maker -->
+
+    <NamedIndividual rdf:about="&rami;movie_maker">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#moving-picture_show -->
+
+    <NamedIndividual rdf:about="&rami;moving-picture_show">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#moving_picture -->
+
+    <NamedIndividual rdf:about="&rami;moving_picture">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#municipality -->
+
+    <NamedIndividual rdf:about="&rami;municipality">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;urban_area"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#music -->
+
+    <NamedIndividual rdf:about="&rami;music">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;auditory_communication"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#music_director -->
+
+    <NamedIndividual rdf:about="&rami;music_director">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#music_genre -->
+
+    <NamedIndividual rdf:about="&rami;music_genre">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;expressive_style"/>
+        <rami:hasSynonym rdf:resource="&rami;genre"/>
+        <rami:isTypeOf rdf:resource="&rami;music"/>
+        <rami:hasSynonym rdf:resource="&rami;musical_genre"/>
+        <rami:hasSynonym rdf:resource="&rami;musical_style"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#musical_composition -->
+
+    <NamedIndividual rdf:about="&rami;musical_composition">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;composition"/>
+        <rami:isTypeOf rdf:resource="&rami;music"/>
+        <rami:hasSynonym rdf:resource="&rami;opus"/>
+        <rami:hasSynonym rdf:resource="&rami;piece"/>
+        <rami:hasSynonym rdf:resource="&rami;piece_of_music"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#musical_genre -->
+
+    <NamedIndividual rdf:about="&rami;musical_genre">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#musical_score -->
+
+    <NamedIndividual rdf:about="&rami;musical_score">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#musical_style -->
+
+    <NamedIndividual rdf:about="&rami;musical_style">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#musician -->
+
+    <NamedIndividual rdf:about="&rami;musician">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;artist"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#natural_phenomenon -->
+
+    <NamedIndividual rdf:about="&rami;natural_phenomenon">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;phenomenon"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#need -->
+
+    <NamedIndividual rdf:about="&rami;need">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#news -->
+
+    <NamedIndividual rdf:about="&rami;news">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;information"/>
+        <rami:hasSynonym rdf:resource="&rami;intelligence"/>
+        <rami:hasSynonym rdf:resource="&rami;tidings"/>
+        <rami:hasSynonym rdf:resource="&rami;word"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#news_program -->
+
+    <NamedIndividual rdf:about="&rami;news_program">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;broadcast"/>
+        <rami:hasSynonym rdf:resource="&rami;news"/>
+        <rami:hasSynonym rdf:resource="&rami;news_show"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#news_show -->
+
+    <NamedIndividual rdf:about="&rami;news_show">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#newspaper_publisher -->
+
+    <NamedIndividual rdf:about="&rami;newspaper_publisher">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#newsworthiness -->
+
+    <NamedIndividual rdf:about="&rami;newsworthiness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;interest"/>
+        <rami:hasSynonym rdf:resource="&rami;news"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#noesis -->
+
+    <NamedIndividual rdf:about="&rami;noesis">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#number -->
+
+    <NamedIndividual rdf:about="&rami;number">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;definite_quantity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#object -->
+
+    <NamedIndividual rdf:about="&rami;object">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;physical_entity"/>
+        <rami:hasSynonym rdf:resource="&rami;physical_object"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#occupation -->
+
+    <NamedIndividual rdf:about="&rami;occupation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;activity"/>
+        <rami:hasSynonym rdf:resource="&rami;business"/>
+        <rami:hasSynonym rdf:resource="&rami;job"/>
+        <rami:hasSynonym rdf:resource="&rami;line"/>
+        <rami:hasSynonym rdf:resource="&rami;line_of_work"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#operation -->
+
+    <NamedIndividual rdf:about="&rami;operation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#opus -->
+
+    <NamedIndividual rdf:about="&rami;opus">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#organisation -->
+
+    <NamedIndividual rdf:about="&rami;organisation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#organism -->
+
+    <NamedIndividual rdf:about="&rami;organism">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;being"/>
+        <rami:isTypeOf rdf:resource="&rami;living_thing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#organization -->
+
+    <NamedIndividual rdf:about="&rami;organization">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;organisation"/>
+        <rami:isTypeOf rdf:resource="&rami;social_group"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#outdoor_sport -->
+
+    <NamedIndividual rdf:about="&rami;outdoor_sport">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;field_sport"/>
+        <rami:isTypeOf rdf:resource="&rami;sport"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#owner -->
+
+    <NamedIndividual rdf:about="&rami;owner">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;businessman"/>
+        <rami:hasSynonym rdf:resource="&rami;proprietor"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#papers -->
+
+    <NamedIndividual rdf:about="&rami;papers">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#paradigm -->
+
+    <NamedIndividual rdf:about="&rami;paradigm">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#part -->
+
+    <NamedIndividual rdf:about="&rami;part">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#patch -->
+
+    <NamedIndividual rdf:about="&rami;patch">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#paygrade -->
+
+    <NamedIndividual rdf:about="&rami;paygrade">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#peer -->
+
+    <NamedIndividual rdf:about="&rami;peer">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;compeer"/>
+        <rami:hasSynonym rdf:resource="&rami;equal"/>
+        <rami:hasSynonym rdf:resource="&rami;match"/>
+        <rami:isTypeOf rdf:resource="&rami;person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#period -->
+
+    <NamedIndividual rdf:about="&rami;period">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#period_of_time -->
+
+    <NamedIndividual rdf:about="&rami;period_of_time">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#person -->
+
+    <NamedIndividual rdf:about="&rami;person">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;causal_agent"/>
+        <rami:hasSynonym rdf:resource="&rami;individual"/>
+        <rami:hasSynonym rdf:resource="&rami;mortal"/>
+        <rami:isTypeOf rdf:resource="&rami;organism"/>
+        <rami:hasSynonym rdf:resource="&rami;somebody"/>
+        <rami:hasSynonym rdf:resource="&rami;someone"/>
+        <rami:hasSynonym rdf:resource="&rami;soul"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#persona -->
+
+    <NamedIndividual rdf:about="&rami;persona">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;appearance"/>
+        <rami:hasSynonym rdf:resource="&rami;image"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#phenomenon -->
+
+    <NamedIndividual rdf:about="&rami;phenomenon">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;process"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#photographic_equipment -->
+
+    <NamedIndividual rdf:about="&rami;photographic_equipment">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;equipment"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#physical_entity -->
+
+    <NamedIndividual rdf:about="&rami;physical_entity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;entity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#physical_object -->
+
+    <NamedIndividual rdf:about="&rami;physical_object">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#physical_phenomenon -->
+
+    <NamedIndividual rdf:about="&rami;physical_phenomenon">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;natural_phenomenon"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#physical_process -->
+
+    <NamedIndividual rdf:about="&rami;physical_process">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#pic -->
+
+    <NamedIndividual rdf:about="&rami;pic">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#picture -->
+
+    <NamedIndividual rdf:about="&rami;picture">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;icon"/>
+        <rami:hasSynonym rdf:resource="&rami;ikon"/>
+        <rami:hasSynonym rdf:resource="&rami;image"/>
+        <rami:isTypeOf rdf:resource="&rami;representation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#picture_show -->
+
+    <NamedIndividual rdf:about="&rami;picture_show">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#piece -->
+
+    <NamedIndividual rdf:about="&rami;piece">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#piece_of_music -->
+
+    <NamedIndividual rdf:about="&rami;piece_of_music">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#piece_of_writing -->
+
+    <NamedIndividual rdf:about="&rami;piece_of_writing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#plan -->
+
+    <NamedIndividual rdf:about="&rami;plan">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;idea"/>
+        <rami:hasSynonym rdf:resource="&rami;program"/>
+        <rami:hasSynonym rdf:resource="&rami;programme"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#plan_of_action -->
+
+    <NamedIndividual rdf:about="&rami;plan_of_action">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;plan"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#plaster_bandage -->
+
+    <NamedIndividual rdf:about="&rami;plaster_bandage">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#plaster_cast -->
+
+    <NamedIndividual rdf:about="&rami;plaster_cast">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#platform -->
+
+    <NamedIndividual rdf:about="&rami;platform">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;computer_system"/>
+        <rami:isTypeOf rdf:resource="&rami;document"/>
+        <rami:isTypeOf rdf:resource="&rami;horizontal_surface"/>
+        <rami:hasSynonym rdf:resource="&rami;political_platform"/>
+        <rami:hasSynonym rdf:resource="&rami;political_program"/>
+        <rami:hasSynonym rdf:resource="&rami;program"/>
+        <rami:isTypeOf rdf:resource="&rami;structure"/>
+        <rami:hasSynonym rdf:resource="&rami;weapons_platform"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#play -->
+
+    <NamedIndividual rdf:about="&rami;play">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;caper"/>
+        <rami:isTypeOf rdf:resource="&rami;diversion"/>
+        <rami:hasSynonym rdf:resource="&rami;frolic"/>
+        <rami:hasSynonym rdf:resource="&rami;gambol"/>
+        <rami:hasSynonym rdf:resource="&rami;romp"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#plot -->
+
+    <NamedIndividual rdf:about="&rami;plot">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;game"/>
+        <rami:isTypeOf rdf:resource="&rami;scheme"/>
+        <rami:hasSynonym rdf:resource="&rami;secret_plan"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#political_platform -->
+
+    <NamedIndividual rdf:about="&rami;political_platform">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#political_program -->
+
+    <NamedIndividual rdf:about="&rami;political_program">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#populated_area -->
+
+    <NamedIndividual rdf:about="&rami;populated_area">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#position -->
+
+    <NamedIndividual rdf:about="&rami;position">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#possession -->
+
+    <NamedIndividual rdf:about="&rami;possession">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;relation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#power -->
+
+    <NamedIndividual rdf:about="&rami;power">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;powerfulness"/>
+        <rami:isTypeOf rdf:resource="&rami;quality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#powerfulness -->
+
+    <NamedIndividual rdf:about="&rami;powerfulness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#pressure -->
+
+    <NamedIndividual rdf:about="&rami;pressure">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;force_per_unit_area"/>
+        <rami:isTypeOf rdf:resource="&rami;physical_phenomenon"/>
+        <rami:hasSynonym rdf:resource="&rami;pressure_level"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#pressure_level -->
+
+    <NamedIndividual rdf:about="&rami;pressure_level">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#prick -->
+
+    <NamedIndividual rdf:about="&rami;prick">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#process -->
+
+    <NamedIndividual rdf:about="&rami;process">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;cognition"/>
+        <rami:hasSynonym rdf:resource="&rami;cognitive_operation"/>
+        <rami:hasSynonym rdf:resource="&rami;cognitive_process"/>
+        <rami:hasSynonym rdf:resource="&rami;mental_process"/>
+        <rami:hasSynonym rdf:resource="&rami;operation"/>
+        <rami:isTypeOf rdf:resource="&rami;physical_entity"/>
+        <rami:hasSynonym rdf:resource="&rami;physical_process"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#producer -->
+
+    <NamedIndividual rdf:about="&rami;producer">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;creator"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#professional -->
+
+    <NamedIndividual rdf:about="&rami;professional">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;adult"/>
+        <rami:hasSynonym rdf:resource="&rami;professional_person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#professional_person -->
+
+    <NamedIndividual rdf:about="&rami;professional_person">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#program -->
+
+    <NamedIndividual rdf:about="&rami;program">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#programme -->
+
+    <NamedIndividual rdf:about="&rami;programme">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#property -->
+
+    <NamedIndividual rdf:about="&rami;property">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;attribute"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#proprietor -->
+
+    <NamedIndividual rdf:about="&rami;proprietor">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#propulsion -->
+
+    <NamedIndividual rdf:about="&rami;propulsion">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;actuation"/>
+        <rami:isTypeOf rdf:resource="&rami;deed"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#prototype -->
+
+    <NamedIndividual rdf:about="&rami;prototype">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;epitome"/>
+        <rami:hasSynonym rdf:resource="&rami;image"/>
+        <rami:isTypeOf rdf:resource="&rami;model"/>
+        <rami:hasSynonym rdf:resource="&rami;paradigm"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#psychological_feature -->
+
+    <NamedIndividual rdf:about="&rami;psychological_feature">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;abstraction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#publisher -->
+
+    <NamedIndividual rdf:about="&rami;publisher">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;firm"/>
+        <rami:hasSynonym rdf:resource="&rami;newspaper_publisher"/>
+        <rami:isTypeOf rdf:resource="&rami;owner"/>
+        <rami:isTypeOf rdf:resource="&rami;professional"/>
+        <rami:hasSynonym rdf:resource="&rami;publishing_company"/>
+        <rami:hasSynonym rdf:resource="&rami;publishing_firm"/>
+        <rami:hasSynonym rdf:resource="&rami;publishing_house"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#publishing_company -->
+
+    <NamedIndividual rdf:about="&rami;publishing_company">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#publishing_firm -->
+
+    <NamedIndividual rdf:about="&rami;publishing_firm">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#publishing_house -->
+
+    <NamedIndividual rdf:about="&rami;publishing_house">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#quality -->
+
+    <NamedIndividual rdf:about="&rami;quality">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;attribute"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#quantity -->
+
+    <NamedIndividual rdf:about="&rami;quantity">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#rancor -->
+
+    <NamedIndividual rdf:about="&rami;rancor">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#rancour -->
+
+    <NamedIndividual rdf:about="&rami;rancour">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#rank -->
+
+    <NamedIndividual rdf:about="&rami;rank">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;status"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#rating -->
+
+    <NamedIndividual rdf:about="&rami;rating">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;standing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#rational_motive -->
+
+    <NamedIndividual rdf:about="&rami;rational_motive">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;motivation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#reading -->
+
+    <NamedIndividual rdf:about="&rami;reading">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;datum"/>
+        <rami:hasSynonym rdf:resource="&rami;indication"/>
+        <rami:hasSynonym rdf:resource="&rami;meter_reading"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#reason -->
+
+    <NamedIndividual rdf:about="&rami;reason">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;ground"/>
+        <rami:isTypeOf rdf:resource="&rami;rational_motive"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#recreation -->
+
+    <NamedIndividual rdf:about="&rami;recreation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#region -->
+
+    <NamedIndividual rdf:about="&rami;region">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;location"/>
+        <rami:hasSynonym rdf:resource="&rami;part"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#relation -->
+
+    <NamedIndividual rdf:about="&rami;relation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;abstraction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#release_date -->
+
+    <NamedIndividual rdf:about="&rami;release_date">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;date"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#representation -->
+
+    <NamedIndividual rdf:about="&rami;representation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;content"/>
+        <rami:isTypeOf rdf:resource="&rami;creation"/>
+        <rami:hasSynonym rdf:resource="&rami;internal_representation"/>
+        <rami:hasSynonym rdf:resource="&rami;mental_representation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#resentment -->
+
+    <NamedIndividual rdf:about="&rami;resentment">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;bitterness"/>
+        <rami:hasSynonym rdf:resource="&rami;gall"/>
+        <rami:isTypeOf rdf:resource="&rami;hostility"/>
+        <rami:hasSynonym rdf:resource="&rami;rancor"/>
+        <rami:hasSynonym rdf:resource="&rami;rancour"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#rhetorical_device -->
+
+    <NamedIndividual rdf:about="&rami;rhetorical_device">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;device"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#roll -->
+
+    <NamedIndividual rdf:about="&rami;roll">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#romp -->
+
+    <NamedIndividual rdf:about="&rami;romp">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#scheme -->
+
+    <NamedIndividual rdf:about="&rami;scheme">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;plan_of_action"/>
+        <rami:hasSynonym rdf:resource="&rami;strategy"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#score -->
+
+    <NamedIndividual rdf:about="&rami;score">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;account"/>
+        <rami:isTypeOf rdf:resource="&rami;debt"/>
+        <rami:isTypeOf rdf:resource="&rami;fact"/>
+        <rami:isTypeOf rdf:resource="&rami;incision"/>
+        <rami:hasSynonym rdf:resource="&rami;musical_score"/>
+        <rami:isTypeOf rdf:resource="&rami;number"/>
+        <rami:isTypeOf rdf:resource="&rami;reason"/>
+        <rami:hasSynonym rdf:resource="&rami;scotch"/>
+        <rami:isTypeOf rdf:resource="&rami;set"/>
+        <rami:isTypeOf rdf:resource="&rami;sheet_music"/>
+        <rami:isTypeOf rdf:resource="&rami;success"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#scotch -->
+
+    <NamedIndividual rdf:about="&rami;scotch">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#scratch -->
+
+    <NamedIndividual rdf:about="&rami;scratch">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#searchGame -->
+
+    <NamedIndividual rdf:about="&rami;searchGame">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+        <rami:isPartOfResource rdf:resource="&rami;SearchGame"/>
+        <rami:hasInput rdf:resource="&rami;metacriticGame"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#searchMovie -->
+
+    <NamedIndividual rdf:about="&rami;searchMovie">
+        <rdf:type rdf:resource="&rami;MethodCall"/>
+        <rami:isPartOfResource rdf:resource="&rami;SearchMovie"/>
+        <rami:hasInput rdf:resource="&rami;metacriticMovie"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#secret_plan -->
+
+    <NamedIndividual rdf:about="&rami;secret_plan">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#seduction -->
+
+    <NamedIndividual rdf:about="&rami;seduction">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;conquest"/>
+        <rami:isTypeOf rdf:resource="&rami;success"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#set -->
+
+    <NamedIndividual rdf:about="&rami;set">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;collection"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sexual_conquest -->
+
+    <NamedIndividual rdf:about="&rami;sexual_conquest">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;score"/>
+        <rami:isTypeOf rdf:resource="&rami;seduction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#shape -->
+
+    <NamedIndividual rdf:about="&rami;shape">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;attribute"/>
+        <rami:hasSynonym rdf:resource="&rami;form"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sheet_music -->
+
+    <NamedIndividual rdf:about="&rami;sheet_music">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;musical_composition"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#shoe -->
+
+    <NamedIndividual rdf:about="&rami;shoe">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;footwear"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#show -->
+
+    <NamedIndividual rdf:about="&rami;show">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;social_event"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#simulacrum -->
+
+    <NamedIndividual rdf:about="&rami;simulacrum">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#slit -->
+
+    <NamedIndividual rdf:about="&rami;slit">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#social_event -->
+
+    <NamedIndividual rdf:about="&rami;social_event">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;event"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#social_group -->
+
+    <NamedIndividual rdf:about="&rami;social_group">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;group"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#solar_day -->
+
+    <NamedIndividual rdf:about="&rami;solar_day">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#solid -->
+
+    <NamedIndividual rdf:about="&rami;solid">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;shape"/>
+        <rami:isTypeOf rdf:resource="&rami;substance"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#solid_food -->
+
+    <NamedIndividual rdf:about="&rami;solid_food">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#somebody -->
+
+    <NamedIndividual rdf:about="&rami;somebody">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#someone -->
+
+    <NamedIndividual rdf:about="&rami;someone">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sort -->
+
+    <NamedIndividual rdf:about="&rami;sort">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sorting -->
+
+    <NamedIndividual rdf:about="&rami;sorting">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#soul -->
+
+    <NamedIndividual rdf:about="&rami;soul">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#spellcheckCorrections -->
+
+    <NamedIndividual rdf:about="&rami;spellcheckCorrections">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">corrections</rami:Label>
+        <ace_lexicon:PN_sg>spellcheckCorrections</ace_lexicon:PN_sg>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#spellcheckOriginal -->
+
+    <NamedIndividual rdf:about="&rami;spellcheckOriginal">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">original</rami:Label>
+        <ace_lexicon:PN_sg>spellcheckOriginal</ace_lexicon:PN_sg>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#spellcheckSuggestion -->
+
+    <NamedIndividual rdf:about="&rami;spellcheckSuggestion">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">suggestion</rami:Label>
+        <ace_lexicon:PN_sg>spellcheckSuggestion</ace_lexicon:PN_sg>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#spellcheckText -->
+
+    <NamedIndividual rdf:about="&rami;spellcheckText">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;dateTime">text</rami:Label>
+        <ace_lexicon:PN_sg>spellcheckText</ace_lexicon:PN_sg>
+        <rami:isEquivalent rdf:resource="&rami;entity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sport -->
+
+    <NamedIndividual rdf:about="&rami;sport">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;athletics"/>
+        <rami:isTypeOf rdf:resource="&rami;diversion"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sportfishing -->
+
+    <NamedIndividual rdf:about="&rami;sportfishing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#stamp -->
+
+    <NamedIndividual rdf:about="&rami;stamp">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#standing -->
+
+    <NamedIndividual rdf:about="&rami;standing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;status"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#state -->
+
+    <NamedIndividual rdf:about="&rami;state">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;attribute"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#statement -->
+
+    <NamedIndividual rdf:about="&rami;statement">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;message"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#status -->
+
+    <NamedIndividual rdf:about="&rami;status">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;position"/>
+        <rami:isTypeOf rdf:resource="&rami;state"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#strategy -->
+
+    <NamedIndividual rdf:about="&rami;strategy">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#structure -->
+
+    <NamedIndividual rdf:about="&rami;structure">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;artifact"/>
+        <rami:hasSynonym rdf:resource="&rami;construction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#style -->
+
+    <NamedIndividual rdf:about="&rami;style">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#subject_matter -->
+
+    <NamedIndividual rdf:about="&rami;subject_matter">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#substance -->
+
+    <NamedIndividual rdf:about="&rami;substance">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;matter"/>
+        <rami:isTypeOf rdf:resource="&rami;physical_entity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#success -->
+
+    <NamedIndividual rdf:about="&rami;success">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;attainment"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sum-up -->
+
+    <NamedIndividual rdf:about="&rami;sum-up">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#summary -->
+
+    <NamedIndividual rdf:about="&rami;summary">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;statement"/>
+        <rami:hasSynonym rdf:resource="&rami;sum-up"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sundown -->
+
+    <NamedIndividual rdf:about="&rami;sundown">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sunrise -->
+
+    <NamedIndividual rdf:about="&rami;sunrise">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sunset -->
+
+    <NamedIndividual rdf:about="&rami;sunset">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;hour"/>
+        <rami:hasSynonym rdf:resource="&rami;sundown"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#sunup -->
+
+    <NamedIndividual rdf:about="&rami;sunup">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#superior -->
+
+    <NamedIndividual rdf:about="&rami;superior">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;higher-up"/>
+        <rami:isTypeOf rdf:resource="&rami;leader"/>
+        <rami:hasSynonym rdf:resource="&rami;superordinate"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#superordinate -->
+
+    <NamedIndividual rdf:about="&rami;superordinate">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#supervisor -->
+
+    <NamedIndividual rdf:about="&rami;supervisor">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;superior"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#surface -->
+
+    <NamedIndividual rdf:about="&rami;surface">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;artifact"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#system -->
+
+    <NamedIndividual rdf:about="&rami;system">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;instrumentality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#temperature -->
+
+    <NamedIndividual rdf:about="&rami;temperature">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;fundamental_quantity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#temporal_property -->
+
+    <NamedIndividual rdf:about="&rami;temporal_property">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;property"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#territorial_division -->
+
+    <NamedIndividual rdf:about="&rami;territorial_division">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#territorial_dominion -->
+
+    <NamedIndividual rdf:about="&rami;territorial_dominion">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#territory -->
+
+    <NamedIndividual rdf:about="&rami;territory">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#theater_director -->
+
+    <NamedIndividual rdf:about="&rami;theater_director">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#theatre_director -->
+
+    <NamedIndividual rdf:about="&rami;theatre_director">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#thought -->
+
+    <NamedIndividual rdf:about="&rami;thought">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#throw -->
+
+    <NamedIndividual rdf:about="&rami;throw">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;gambling"/>
+        <rami:isTypeOf rdf:resource="&rami;propulsion"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#tidings -->
+
+    <NamedIndividual rdf:about="&rami;tidings">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#time -->
+
+    <NamedIndividual rdf:about="&rami;time">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;attribute"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#time_of_day -->
+
+    <NamedIndividual rdf:about="&rami;time_of_day">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#time_period -->
+
+    <NamedIndividual rdf:about="&rami;time_period">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;fundamental_quantity"/>
+        <rami:hasSynonym rdf:resource="&rami;period"/>
+        <rami:hasSynonym rdf:resource="&rami;period_of_time"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#time_unit -->
+
+    <NamedIndividual rdf:about="&rami;time_unit">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;measure"/>
+        <rami:hasSynonym rdf:resource="&rami;unit_of_time"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#time_zone -->
+
+    <NamedIndividual rdf:about="&rami;time_zone">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;zone"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#top_dog -->
+
+    <NamedIndividual rdf:about="&rami;top_dog">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#transgression -->
+
+    <NamedIndividual rdf:about="&rami;transgression">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;evildoing"/>
+        <rami:isTypeOf rdf:resource="&rami;wrongdoing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#trope -->
+
+    <NamedIndividual rdf:about="&rami;trope">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;figure"/>
+        <rami:hasSynonym rdf:resource="&rami;figure_of_speech"/>
+        <rami:hasSynonym rdf:resource="&rami;image"/>
+        <rami:isTypeOf rdf:resource="&rami;rhetorical_device"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#twenty-four_hour_period -->
+
+    <NamedIndividual rdf:about="&rami;twenty-four_hour_period">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#twenty-four_hours -->
+
+    <NamedIndividual rdf:about="&rami;twenty-four_hours">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#uniform_resource_locator -->
+
+    <NamedIndividual rdf:about="&rami;uniform_resource_locator">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#unit -->
+
+    <NamedIndividual rdf:about="&rami;unit">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#unit_of_time -->
+
+    <NamedIndividual rdf:about="&rami;unit_of_time">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#universal_resource_locator -->
+
+    <NamedIndividual rdf:about="&rami;universal_resource_locator">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#urban_area -->
+
+    <NamedIndividual rdf:about="&rami;urban_area">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;geographical_area"/>
+        <rami:hasSynonym rdf:resource="&rami;populated_area"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#urban_center -->
+
+    <NamedIndividual rdf:about="&rami;urban_center">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#user_score -->
+
+    <NamedIndividual rdf:about="&rami;user_score">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#valuation -->
+
+    <NamedIndividual rdf:about="&rami;valuation">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#variety -->
+
+    <NamedIndividual rdf:about="&rami;variety">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#vice -->
+
+    <NamedIndividual rdf:about="&rami;vice">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;transgression"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#video_game -->
+
+    <NamedIndividual rdf:about="&rami;video_game">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#visual_aspect -->
+
+    <NamedIndividual rdf:about="&rami;visual_aspect">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weaherHighTemp -->
+
+    <NamedIndividual rdf:about="&rami;weaherHighTemp">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">high</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;dayWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;temperature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weapons_platform -->
+
+    <NamedIndividual rdf:about="&rami;weapons_platform">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weaterSunrise -->
+
+    <NamedIndividual rdf:about="&rami;weaterSunrise">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">sunrise</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;sunrise"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weather -->
+
+    <NamedIndividual rdf:about="&rami;weather">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;atmospheric_condition"/>
+        <rami:isTypeOf rdf:resource="&rami;atmospheric_phenomenon"/>
+        <rami:hasSynonym rdf:resource="&rami;weather_condition"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherChill -->
+
+    <NamedIndividual rdf:about="&rami;weatherChill">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">chill</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;chill"/>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherCity -->
+
+    <NamedIndividual rdf:about="&rami;weatherCity">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">city</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;city"/>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isOutputTo rdf:resource="&rami;dayWeather"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherCountry -->
+
+    <NamedIndividual rdf:about="&rami;weatherCountry">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">country</rami:Label>
+        <rami:isEquivalent rdf:resource="&rami;country"/>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isOutputTo rdf:resource="&rami;dayWeather"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherDate -->
+
+    <NamedIndividual rdf:about="&rami;weatherDate">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;dateTime">date</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;date"/>
+        <rami:isOutputTo rdf:resource="&rami;dayWeather"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherDay -->
+
+    <NamedIndividual rdf:about="&rami;weatherDay">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">day</rami:Label>
+        <rami:isInputTo rdf:resource="&rami;dayWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;days_of_the_week"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherHumidity -->
+
+    <NamedIndividual rdf:about="&rami;weatherHumidity">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">humidity</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;humidity"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherLatitude -->
+
+    <NamedIndividual rdf:about="&rami;weatherLatitude">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">lat</rami:Label>
+        <rami:isInputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isInputTo rdf:resource="&rami;dayWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;latitude"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherLongitude -->
+
+    <NamedIndividual rdf:about="&rami;weatherLongitude">
+        <rdf:type rdf:resource="&rami;InputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">lng</rami:Label>
+        <rami:isInputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isInputTo rdf:resource="&rami;dayWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;longitude"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherLowTemp -->
+
+    <NamedIndividual rdf:about="&rami;weatherLowTemp">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">low</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;dayWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;temperature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherPressure -->
+
+    <NamedIndividual rdf:about="&rami;weatherPressure">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">pressure</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;pressure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherRegion -->
+
+    <NamedIndividual rdf:about="&rami;weatherRegion">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">region</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isOutputTo rdf:resource="&rami;dayWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;region"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherRising -->
+
+    <NamedIndividual rdf:about="&rami;weatherRising">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">rising</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherSunset -->
+
+    <NamedIndividual rdf:about="&rami;weatherSunset">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">sunset</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;sunset"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherTemp -->
+
+    <NamedIndividual rdf:about="&rami;weatherTemp">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">temp</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;temperature"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherText -->
+
+    <NamedIndividual rdf:about="&rami;weatherText">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">text</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isOutputTo rdf:resource="&rami;dayWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;weather"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherVisibility -->
+
+    <NamedIndividual rdf:about="&rami;weatherVisibility">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">visibility</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherWindDir -->
+
+    <NamedIndividual rdf:about="&rami;weatherWindDir">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">direction</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;wind_direction"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weatherWindSpd -->
+
+    <NamedIndividual rdf:about="&rami;weatherWindSpd">
+        <rdf:type rdf:resource="&rami;OutputParam"/>
+        <rami:Label rdf:datatype="&xsd;string">speed</rami:Label>
+        <rami:isOutputTo rdf:resource="&rami;currentWeather"/>
+        <rami:isEquivalent rdf:resource="&rami;wind_speed"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weather_condition -->
+
+    <NamedIndividual rdf:about="&rami;weather_condition">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#weekday -->
+
+    <NamedIndividual rdf:about="&rami;weekday"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#wetness -->
+
+    <NamedIndividual rdf:about="&rami;wetness">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;condition"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#whole -->
+
+    <NamedIndividual rdf:about="&rami;whole">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;object"/>
+        <rami:hasSynonym rdf:resource="&rami;unit"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#wind_direction -->
+
+    <NamedIndividual rdf:about="&rami;wind_direction">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#wind_speed -->
+
+    <NamedIndividual rdf:about="&rami;wind_speed">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#word -->
+
+    <NamedIndividual rdf:about="&rami;word">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#writing -->
+
+    <NamedIndividual rdf:about="&rami;writing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:hasSynonym rdf:resource="&rami;piece_of_writing"/>
+        <rami:isTypeOf rdf:resource="&rami;written_communication"/>
+        <rami:hasSynonym rdf:resource="&rami;written_material"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#writing_style -->
+
+    <NamedIndividual rdf:about="&rami;writing_style">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;expressive_style"/>
+        <rami:hasSynonym rdf:resource="&rami;genre"/>
+        <rami:hasSynonym rdf:resource="&rami;literary_genre"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#written_communication -->
+
+    <NamedIndividual rdf:about="&rami;written_communication">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;communication"/>
+        <rami:hasSynonym rdf:resource="&rami;written_language"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#written_document -->
+
+    <NamedIndividual rdf:about="&rami;written_document">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#written_language -->
+
+    <NamedIndividual rdf:about="&rami;written_language">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#written_material -->
+
+    <NamedIndividual rdf:about="&rami;written_material">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#wrongdoing -->
+
+    <NamedIndividual rdf:about="&rami;wrongdoing">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;activity"/>
+        <rami:hasSynonym rdf:resource="&rami;actus_reus"/>
+        <rami:hasSynonym rdf:resource="&rami;misconduct"/>
+        <rami:hasSynonym rdf:resource="&rami;wrongful_conduct"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#wrongful_conduct -->
+
+    <NamedIndividual rdf:about="&rami;wrongful_conduct">
+        <rdf:type rdf:resource="&rami;Noun"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rami#zone -->
+
+    <NamedIndividual rdf:about="&rami;zone">
+        <rdf:type rdf:resource="&rami;Noun"/>
+        <rami:isTypeOf rdf:resource="&rami;geographical_area"/>
+        <rami:hasSynonym rdf:resource="&rami;geographical_zone"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

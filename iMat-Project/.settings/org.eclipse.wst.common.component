@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="iMat-Project">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="jersey-core-1.19.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jersey-core-1.19.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="owlapi-parsers-3.4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/owlapi-parsers-3.4.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="owlapi-apibinding-3.4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/owlapi-apibinding-3.4.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="activation-1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/activation-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="axiom-c14n-1.2.14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/axiom-c14n-1.2.14.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="owlapi-api-3.4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/owlapi-api-3.4.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaxen-1.1.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jaxen-1.1.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="owlapi-distribution-3.4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/owlapi-distribution-3.4.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpclient-4.2.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/httpclient-4.2.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.17.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/log4j-1.2.17.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="prologbeans.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/prologbeans.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-json-1.19.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jersey-json-1.19.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/commons-logging.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="test.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/test.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsr311-api-1.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jsr311-api-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.7.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/slf4j-api-1.7.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="MetaMapApi.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/MetaMapApi.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xml-apis-1.4.01.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/xml-apis-1.4.01.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.7.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/slf4j-api-1.7.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-asl-1.9.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jackson-core-asl-1.9.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lucene-analyzers-common-5.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/lucene-analyzers-common-5.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava-18.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/guava-18.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="automaton-1.11-8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/automaton-1.11-8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="opennlp-tools-1.5.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/opennlp-tools-1.5.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="axiom-dom-1.2.14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/axiom-dom-1.2.14.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsr305-3.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jsr305-3.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="skosapi.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/skosapi.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xercesImpl-2.11.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/xercesImpl-2.11.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-jaxrs-1.9.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jackson-jaxrs-1.9.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="geronimo-javamail_1.4_spec-1.7.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/geronimo-javamail_1.4_spec-1.7.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpclient-cache-4.2.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/httpclient-cache-4.2.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-mapper-asl-1.9.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jackson-mapper-asl-1.9.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-log4j12-1.7.6.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/slf4j-log4j12-1.7.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="owlapi-src.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/owlapi-src.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.protege.editor.owl.codegeneration-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/org.protege.editor.owl.codegeneration-1.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="owlapi-bin.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/owlapi-bin.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-codec-1.10.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/commons-codec-1.10.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-xc-1.9.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jackson-xc-1.9.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="owlapi-impl-3.4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/owlapi-impl-3.4.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.semanticweb.owl.owlapi-3.4.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/org.semanticweb.owl.owlapi-3.4.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-20090211.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/json-20090211.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="axiom-api-1.2.14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/axiom-api-1.2.14.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="geronimo-activation_1.1_spec-1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/geronimo-activation_1.1_spec-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="httpcore-4.2.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/httpcore-4.2.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.ws.rs-api-2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/javax.ws.rs-api-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="stax2-api-3.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/stax2-api-3.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="woodstox-core-asl-4.1.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/woodstox-core-asl-4.1.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="stax-api-1.0-2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/stax-api-1.0-2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaws-bin.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jaws-bin.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.1.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/commons-logging-1.1.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.3.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/commons-lang3-3.3.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaxb-impl-2.2.3-1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jaxb-impl-2.2.3-1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="apache-mime4j-core-0.7.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/apache-mime4j-core-0.7.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jwnl.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jwnl.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="owlapi-tools-3.4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/owlapi-tools-3.4.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="geronimo-stax-api_1.0_spec-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/geronimo-stax-api_1.0_spec-1.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="joda-time-2.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/joda-time-2.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaxb-api-2.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jaxb-api-2.2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jwnl-1.3.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jwnl-1.3.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.semanticweb.hermit-1.3.8.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/org.semanticweb.hermit-1.3.8.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lucene-core-5.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/lucene-core-5.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="opennlp-maxent-3.0.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/opennlp-maxent-3.0.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jersey-client-1.18.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jersey-client-1.18.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jettison-1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jettison-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.osgi.core-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/org.osgi.core-1.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="axiom-impl-1.2.14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/axiom-impl-1.2.14.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lucene-queryparser-5.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/lucene-queryparser-5.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="java-support-7.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/java-support-7.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jena-core-2.13.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jena-core-2.13.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jena-iri-1.1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jena-iri-1.1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jena-arq-2.13.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/PhD/IMat/iMat-Project/lib/jena-arq-2.13.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaws-bin.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/E:/phd/IMat/iMat-Project/lib/jaws-bin.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="iMat-Project"/>
+        <property name="java-output-path" value="/iMat-Project/build/classes"/>
+    </wb-module>
+</project-modules>
